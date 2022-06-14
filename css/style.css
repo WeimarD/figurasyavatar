@@ -1,0 +1,342 @@
+/*El * significa todo*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*pone la margen hacia dentro*/
+}
+body {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background: url(../img/Fondo1.jpg);
+    background-size: cover;
+    background-attachment: fixed; /*para hacer un fondo fijo*/
+    font-family: 'Mali', cursive;
+    transition: .5s;
+}
+body h1{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+body h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+/*El root se usa para crear variables con valores repetitivos en el sitio web, como colores, tamaño, tipografias, margenes*/
+:root{
+    --primaryColor: #62daff;
+    --secondaryColor: #008955;
+}
+.fila{
+    display: flex;
+    width: 1024px;
+    margin: 50px auto;
+    border: 2px solid #000000;
+    transition: .5s;
+    text-align: center;
+}
+.fila .contBotones{
+    width: 50%;
+    border: 1px solid #000000;
+    background: var(--primaryColor);
+    text-align: center;
+    padding: 20px 10px;
+    transition: .5s;
+}
+.contBotones h2{
+    color: var(--secondaryColor);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.contBotones button{
+    padding: 12px 30px;
+    background: var(--secondaryColor);
+    font-family: 'Mali', cursive;
+    font-weight: 500; /*se usa para establecer el grosor de la tipografia, para nonerla en negrita se pone bold*/
+    color: #000000;
+    border: 1px solid #000000;
+    margin: 12px;
+    cursor: pointer;
+    transition: .3s;
+}
+.contFiguras h2{
+    color: var(--primaryColor);
+    font-size: 40px;
+    margin-bottom: 90px;
+    transition: .5s;
+}
+.fila .contFiguras{
+    width: 50%;
+    border: 1px solid #000000;
+    background: var(--secondaryColor);
+    padding: 20px 10px;
+    text-align: center;
+    transition: .5s;
+}
+.contFiguras #figura{
+    background: #ffffff;
+    border: 1px solid #000000;
+    margin: 40px auto;
+    width: 120px;
+    height: 120px;
+    transition: 1s;
+}
+    /*
+    rotate sirve para rotar la figura
+    scale sirve para aumentar el tamaño
+    traslate mover en eje x y y
+    swen sirve para distorcionar
+    display: none; oara ocultar
+    */
+#figura.circulo{
+    border-radius: 50%;
+    transform: rotate(-360deg);
+}
+#figura.rombo{
+    border-radius: 0%;
+    transform: rotate(135deg);
+}
+#figura.rectanguloH{
+    width: 200px;
+}
+#figura.rectanguloV{
+    height: 200px;
+}
+#figura.arriba{
+    transform: translateY(-50px);
+}
+#figura.abajo{
+    transform: translateY(50px);
+}
+#figura.izquierda{
+    transform: translateX(-50px);
+}
+#figura.derecha{
+    transform: translateX(50px);
+}
+#figura.diagonal{
+    transform: translate(50px, 50px)
+}
+#figura.triangulo{
+    width: 0;   
+    height: 0;
+    border-left: 100px solid #ffffff;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-right: transparent;
+    background: var(--secondaryColor);
+    transform: rotate(-90deg);  
+}
+#figura.imagen{
+    background: url("../img/Imagen.gif");
+    background-size: cover;
+    transform: scale(1.5);
+}
+#figura.cuadrado{
+    width: 120px;
+    height: 120px;
+}
+
+.ejercicio{
+    display: flex;
+    width: 1024px;
+    margin: 50px auto;
+    border: 2px solid #000000;
+    transition: .5s;
+}
+.ejercicio .extras{
+    background: var(--secondaryColor);
+    width: 50%;
+    text-align: center;
+    padding: 20px 10px;
+    border: 1px solid #000000;
+    transition: .5s;
+}
+.ejercicio .contSalida{
+    background: var(--primaryColor);
+    font-family: 'Mali', cursive;
+    font-size: 20px;
+    font-weight: 500;
+    width: 50%;
+    text-align: center;
+    padding: 20px 10px;
+    border: 1px solid #000000;
+    transition: .5s;
+}
+.extras button{
+    margin: 12px;
+    padding: 12px 30px;
+    background: var(--primaryColor);
+    font-family: 'Mali', cursive;
+    font-weight: 500;
+    color: #000000;
+    border: 1px solid #000000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contSalida #salida{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#salida #demo{
+    margin-top: 50px;
+    color: #000000;
+}
+#salida #demo1{
+    color: #000000;
+}
+
+.contBotones button:hover{
+    padding: 17px 35px;
+    background: #11a16a;
+    font-weight: 700;
+    margin: 7px;
+    box-shadow: 5px 5px #69b7cf;
+}
+.extras button:hover{
+    padding: 17px 35px;
+    background: #a4eaff;
+    font-weight: 700;
+    margin: 7px;
+    box-shadow: 5px 5px #035737;
+}
+#modo.oscuro{
+    background: url(../img/Fondo2.png);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+#modo.oscuro .fila{
+    border: 2px solid #ffffff;
+}
+#modo.oscuro .fila .contBotones{
+    border: 1px solid #ffffff;
+}
+#modo.oscuro .fila .contFiguras{
+    border: 1px solid #ffffff;
+}
+#modo.oscuro .ejercicio{
+    border: 2px solid #ffffff;
+}
+#modo.oscuro .ejercicio .extras{
+    border: 1px solid #ffffff;
+}
+#modo.oscuro .ejercicio .contSalida{
+    border: 1px solid #ffffff;
+}
+
+/* crear avatar */
+.fila .contForm h2{
+    color: #000000;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.fila .contForm p{
+    text-align: center;
+    font-size: 20px;
+}
+.fila .contForm{
+    background: var(--primaryColor);
+    border: 1px solid #000000;
+    width: 50%;
+}
+.contForm form .formgroup{
+    padding: 10px 70px;
+    text-align: left;
+}
+form .formgroup label{
+    display: block;
+}
+form .formgroup input{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+form .formgroup select{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+form .formgroup textarea{
+    width: 100%;
+    height: 100px;
+    padding: 10px 15px;
+    font-size: 16px;
+} /*Se puede abrebiar con la coma form .formgroup textare, form .formgroup, ... */
+.fila button{
+    padding: 12px 30px;
+    background: var(--secondaryColor);
+    font-family: 'Mali', cursive;
+    font-weight: 500; /*se usa para establecer el grosor de la tipografia, para nonerla en negrita se pone bold*/
+    color: #000000;
+    border: 1px solid #000000;
+    margin: 12px;
+    cursor: pointer;
+    transition: .3s;
+}
+.fila button:hover{
+    padding: 17px 35px;
+    background: #11a16a;
+    font-weight: 700;
+    margin: 7px;
+    box-shadow: 5px 5px #69b7cf;
+}
+form{   
+    margin-top: 30px;
+    text-align: center;
+}
+.fila .contAvatar{
+    text-align: center;
+    padding: 40px;
+    background: #c9f3ff;
+    width: 50%;
+    border: 1px solid #000000;
+}
+.contAvatar p{
+    margin: 12px;
+    font-size: 25px;
+}
+.contAvatar h3{
+    margin: 12px;
+    font-size: 30px;
+}
+
+#contAvatar.rojo{
+    background: #ff0000;
+}
+#contAvatar.verde{
+    background: #008000;
+}
+#contAvatar.azul{
+    background: #0000ff;
+}
+#contAvatar.negro{
+    background: #000000;
+}
+#contAvatar.negro h3, #contAvatar.negro p {
+    color: #ffffff;
+}
+#contAvatar.morado{
+    background: #800080;
+}
+.btn{
+    border: 1px solid #000000;
+    bottom: 100px;
+    right: 120px;
+    background: var(--secondaryColor);
+    color: #000000;
+    padding: 12px 40px;
+    text-decoration: none;
+    transition: .3s;
+}
+.btn:hover{
+    padding: 17px 45px;
+    background: #11a16a;
+    font-weight: 700;
+    box-shadow: 5px 5px #69b7cf;
+}

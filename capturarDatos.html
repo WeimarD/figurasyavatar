@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capturar Datos Avatar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="fila">
+        <div class="contForm">
+            <h2>Registrar información avatar</h2>
+            <p>por favor ingrese los datos para su avatar</p>
+            <form action="#">
+                <div class="formgroup">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" placeholder="Pepito" required>
+                </div>
+                <div class="formgroup">
+                    <label for="edad">edad:</label>
+                    <input type="number" id="edad" placeholder="18" required>
+                </div>
+                <div class="formgroup">
+                    <label for="fecha">Fecha de nacimiento:</label>
+                    <input type="Date" id="fecha" required>
+                </div>
+                <div class="formgroup">
+                    <label for="genero">Genero:</label>
+                    <select name="#" id="genero">
+                        <option value="">selección</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Maculino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div class="formgroup">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Example@gmail.com" required>
+                </div>
+                <div class="formgroup">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea name="" id="descripcion" cols="30" rows="10" placeholder="Tus cualidades"></textarea>
+                </div>
+                <div class="formgroup">
+                    <label for="color">Color:</label>
+                    <select name="#" id="color">
+                        <option value="">selección</option>
+                        <option value="rojo">Rojo</option>
+                        <option value="verde">Verde</option>
+                        <option value="azul">Azul</option>
+                        <option value="negro">Negro</option>
+                        <option value="morado">Morado</option>
+                    </select>
+                </div>
+            </form>
+            <button onclick="capturarDatos()">Crear avatar</button>
+        </div>
+            <div class="contAvatar" id="contAvatar">
+                <img id="mFoto" src="../Figuras/img/user.png" alt="imagen de usuario">
+                <h3 id="mNombres">nombre</h3>
+                <p id="mDescripcion">descripcion</p>
+                <p id="mEdad">edad</p>
+                <p id="mFecha">fecha</p>
+                <P id="mGenero">Genero</P>
+                <p id="mEmail">email</p>
+            </div>
+    </section>
+    <a class="btn" href="index.html">Proyecto Figuras Geometricas</a>
+    
+    <script src="js/functions.js"></script>
+</body>
+</html>

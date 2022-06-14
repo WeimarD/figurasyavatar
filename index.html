@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras geometricas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body id="modo">
+    <h1>Figuras Geometricas</h1>
+    <h2>Weimar Ivan Duarte Ordoñez</h2>
+
+    <section class="fila">
+        <div class="contBotones">
+            <h2>Interacciones</h2>
+            <button onclick="circulo ()">Circulo</button>
+            <button onclick="rombo ()">Rombo</button>
+            <button onclick="rectanguloH ()">Rectangulo Horizontal</button>
+            <button onclick="rectanguloV ()">Rectangulo Vertical</button>
+            <button onclick="triangulo ()">Triangulo</button>
+            <button onclick="cuadrado ()">Cuadrado</button>
+            <button onclick="arriba ()">Arriba</button>
+            <button onclick="abajo ()">Abajo</button>
+            <button onclick="izquierda ()">Izquierda</button>
+            <button onclick="derecha ()">Derecha</button>
+            <button onclick="diagonal ()">Diagonal</button>
+            <button onclick="imagen ()">Imagen</button>
+            
+        </div>
+        
+        <div class="contFiguras">
+            <h2>Figura</h2>
+            <div id="figura"></div>
+        </div>
+    </section>
+    <section class="ejercicio">
+        <div class="extras">
+            <button type="button"onclick= "modificar()">Cambiar parrafo</button>
+            <button type="button"onclick="document.getElementById('demo').innerHTML = Date()">Haga click para mostar la fecha y hora</button>
+            <button type="button"onclick="suma ()"> sumar 15 + 17</button>
+            <button type="button"onclick="document.getElementById('demo').innerHTML = 'Hola, ¿quieres ser mi amigo? UwU.'">Click aquí</button>
+            <button type="button"onclick="oscuro ()">Modo oscuro</button>
+        </div>
+        <div class="contSalida">
+            <div id="salida">
+                <p id="demo1">Este trabajo es muy facil <br> Estoy feliz :)</p>
+                <p id="demo"></p>
+            </div>
+        </div>
+    </section>
+
+    <a class="btn" href="capturarDatos.html">Crear Avatar</a>
+    <script src="js/functions.js"></script>
+</body>
+</html>
